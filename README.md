@@ -29,6 +29,25 @@ This data set was built in 2016 by scrapping Local Area Unemployment Statistics 
 [_Minimum wage source_](https://www.dol.gov/whd/state/stateMinWageHis.htm )  
 This websites provide us the minimum wage rates for all states in the USA from 1968 - 2018.
 
+## Method 
+
+For this study, we decided to go ahead with observational study rather than conducting experiments as
+conducting experiment is not under our control. We have used the difference in differences(DID) method for
+our analysis. DID is a quasi-experimental design that makes use of longitudinal data from treatment and
+control groups to obtain an appropriate counterfactual to estimate a causal effect. DID is typically used to
+estimate the effect of a specific intervention or treatment (such as a passage of law, enactment of policy)
+by comparing the changes in outcomes over time between a population that is enrolled in a program (the
+intervention group) and a population that is not (the control group). DID requires data from pre-/postintervention,
+such as cohort or panel data (individual level data over time) or repeated cross-sectional data
+(individual or group level).
+DID is used in observational settings where exchangeability cannot be assumed between the treatment and
+control groups. DID relies on a less strict exchangeability assumption, i.e., in absence of treatment, the
+unobserved differences between treatment and control groups are the same overtime. The parallel trend
+assumption is the most critical assumptions to ensure internal validity of DID models i.e., treatment and
+control groups have Parallel Trends in outcome in the pre period of the treatment. We observed that the
+assumptions of difference in differences was met and hence proceeded with this approach to find an effect of
+increase in federal minimum wage on unemployment rate.
+
 
 ## Conclusion and Next steps
 
