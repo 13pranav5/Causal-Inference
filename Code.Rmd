@@ -1,0 +1,360 @@
+---
+title: "Impact of Increase in Federal Minimum Wage Rate on Unemployment Rate - Group 2"
+author: "Abhijitha Babu, Rohan Bhatia, Lu Chen. Rakesh Gupta, Kristina Larsen, Pranav Lingaraju"
+date: "February 28, 2019" 
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+Minimum wage rate is set by the policymakers in the U.S who are accounting for lot of macroeconomic and microeconomic factors affecting the economy and all the states. The ultimate goal of the minimum wage rate is to ensure all full-time workers can make a living wage. Minimum wage rate at the Federal level is set by considering all the states and the national economy as a whole. It's important to note that minimum wage rate at Federal level is the floor for the whole country but States can choose their own minimum wage above that of the Federal minimum. Some of the States and even counties increase their minimum wage rate above the Fed level for reasons such as experiencing higher economic growth and GDP than the country's average or compensating for a higher cost of living in the area. 
+
+Raising the minimum wage is very controversial, with many businesses claiming it hurts them and negatively
+impacts hiring and employment levels. A common argument is that wages are set as part of the market, responding to supply and demand in a way that is disrupted when an artificial floor is imposed by a minimum wage. This disruption causes higher unemployment due to a mismatch of what an employee is worth to the business and what a business is required to pay. 
+
+With this in mind, we propose to attempt to find and measure the impact, if any, on the unemployment rate when the minimum wage is raised.
+
+
+## Background
+A lot of research has already been done on this topic, however, there is no consensus on the outcome of it. Research from 2014 posted by the Bureau of Labor Statistics states that researchers Meer and West did not find a reduction in the level of unemployment due to a minimum wage increase. (Source 1 -  all sources listed at end of document). Economists Card and Krueger looked at an increase in New Jersey's minimum wage as compared to a changed wage in Pennsylvania and found no evidence it caused an increase in unemployment (Source 2). 
+
+However, David Neumark and William Wascher re-evaluated the evidence from Card and Krueger's (1994)
+New Jersey-Pennsylvania minimum wage experiment on the Effect of New Jersey's Minimum Wage Increase
+on Fast-Food Employment and found that wage increase led to a 4.6 percent decrease in employment in New
+Jersey relative to the Pennsylvania group (Source 3).
+
+
+## Motivation
+The Federal government has recently proposed a minimum wage policy change. The last time when Fed increased its minimum wage rate was 2009 and no changes have been observed in minimum wage rate since then. However, recently Democrats introduced bill to hike federal minimum wage gradually to $15 per hour, more than the
+double than that of the current minimum wage rate of $7.25 (Source 4).
+
+Considering the scale at which hike has been proposed, we wanted to study what is the causal impact of
+raising the Federal minimum wage rate on unemployment. Does hike in the Federal minimum wage rate lead to
+more unemployment, as has been suggested by many? Hence, we decided to choose our focus of study on this topic. We believe a coherent and thoughtful study of this topic could help the Fed decide better whether to pursue hike in the Federal minimum wage or not.
+
+
+
+## Experiment Settings
+To measure any effect of an increase in the Federal minimum wage on employment, we first looked for an instance of the minimum wage being raised in between periods of a stable Federal minimum wage level. This would allow for us to get a clear picture of unemployment before an increase and after an increase, all else held equal for our difference in difference methodology. From the time period of 1992 - 2016, we selected the Federal minimum wage rate increase beginning in 2007 for our experiment. The federal minimum wage was unchanged for several years prior to 2007 and was again unchanged for several years after the minimum wage increase was concluded in 2009.
+
+Since the Fed continuously increase its Fed minimum wage rate in 2007, 2008 and 2009, we didn't get a single treatment effect. Hence, we considered 3 years before 2007 (2004, 2005 and 2006) as pre-treatment period and 3 years after 2009 (2010, 2011 and 2012) as post treatment period. We know 2007, 2008 and 2009 was the year in which minimum wage rate was changing regularly and hence concluded the unemployment rate measurements from that time period could not be included in pre-treatment or post-treatment analysis.
+
+We referenced Fed minimum wage rate increase in 2009 as the invoking point to decide which groups are in treatment and the control group. Since, Fed doesn't consider any state in specific while deciding this hike, our experiment was randomized.
+
+States which were below Fed minimum wage rate set in 2009 and must increase its state minimum wage
+rate to match guidelines set by Fed were considered as treatment group. States which were already above
+Fed minimum wage rate in 2009 and didn't increase its minimum wage rate in post treatment period were
+considered it as Control group.
+
+
+To summarize, following are the key element of the experimental design:    
+
+__Unit of Analysis__: State    
+__Period of Observation__: 2004 - 2013  
+__Pre-treatment period__: 2004-2006  
+__Years of Treatment__: 2007-2009  
+__Post-treatment period__: 2010-2013  
+__Treatment Variable__: Increase in Federal Minimum Wage rate  
+__Outcome Variable__: Unemployment Rate    
+__Treatment group__: State for which minimum wage rate in state was increased to meet guidelines set by Fed.  
+__Control group__: State for which state minimum wage rate was not changed following guidelines by Fed.
+
+
+__Data sources__: We have combined the below two data sources for our analysis.  
+[_Unemployment rate source_](https://www.kaggle.com/jayrav13/unemployment-by-county-us/home )  
+This data set was built in 2016 by scrapping Local Area Unemployment Statistics from the website of the US Department of Labor Bureau of Labor Statistics. It contains unemployment data at the county and state level from 1990 to 2016.   
+[_Minimum wage source_](https://www.dol.gov/whd/state/stateMinWageHis.htm )  
+This websites provide us the minimum wage rates for all states in the USA from 1968 - 2018.
+
+
+
+## Methods
+
+For this study, we decided to go ahead with observational study rather than conducting experiments as conducting experiment is not under our control. We have used the difference in differences(DID) method for our analysis. DID is a quasi-experimental design that makes use of longitudinal data from treatment and control groups to obtain an appropriate counterfactual to estimate a causal effect. DID is typically used to estimate the effect of a specific intervention or treatment (such as a passage of law, enactment of policy) by comparing the changes in outcomes over time between a population that is enrolled in a program (the intervention group) and a population that is not (the control group).
+DID requires data from pre-/post-intervention, such as cohort or panel data (individual level data over time) or repeated cross-sectional data (individual or group level). 
+
+DID is used in observational settings where exchangeability cannot be assumed between the treatment and control groups. DID relies on a less strict exchangeability assumption, i.e., in absence of treatment, the unobserved differences between treatment and control groups are the same overtime. 
+The parallel trend assumption is the most critical assumptions to ensure internal validity of DID models i.e., treatment and control groups have Parallel Trends in outcome in the pre period of the treatment.
+We observed that the assumptions of difference in differences was met and hence proceeded with this approach to find an effect of increase in federal minimum wage on unemployment rate. 
+The model results and the test for assumptions are in the appendix.
+
+
+### Conclusion and Next steps
+
+From our analysis, We conclude that an increase in Federal minimum wages have no causal effect on the unemployment rate under our set of assumptions. 
+
+However, We are not very confident of saying that we can go ahead with the new policy to increase the federal minimum wage yet. We have assumed a treatment period from 2007-2009. We have not accounted for how states behaved in this treatment period. We would want to observe the effect of treatment separately for all three years i.e., 2007,2008 and 2009. We feel this will give us a more comprehensive result and will help us make the right decision.
+
+
+### Assumptions and Limitations
+1.	Interference: There might be interference as people migrate from state with lower minimum wage rate to neighboring states in search of better opportunities.
+
+2.	Difference in minimum wage rate within State: We rolled up the county unemployment rate to state level for our study. However, some of the counties have different unemployment rate as compared to the State unemployment rate. If we want to account for these differences, we could go one level below by studying impact of Fed minimum wage hike rate at county level. However, in this case interference problem explained in point 1 would increase as it is quite flexible to move from one county to another county than moving from one State to another State. A much more precise way to achieve average unemployment rate would have been to consider weighted average rate by considering population of each country. 
+
+3.	Continuous increase in Federal rate: Treatment effect is assumed to take place on January 1st, 2009, however, Federal hiked minimum wage rate over the period of 3 years i.e. from 2007 till 2009. This limitation could be bypassed by studying period when Fed minimum wage rate was hiked only once a year and it was not followed by another hike. The data that we gathered doesn't contain any such record.
+
+4.	 Dynamic confounders: The systematic differences and static confounds will cancel out by using DID. However, there could be dynamic confounders (like policy change in the state that varied in the post treatment period) that might have affected the output. A much more advance method of dynamic difference in difference could be done to avoid these limitations.
+
+
+Sources:
+
+
+1.	[The Atlantic](https://www.theatlantic.com/business/archive/2017/01/economism-and-the-minimum-wage/513155/ )
+
+2.	[Bureau of Labor Statistics](https://www.bls.gov/opub/mlr/2014/beyond-bls/determining-the-employment-effect-of-raising-the-minimum-wage )
+
+3.	[Ideas](https://ideas.repec.org/p/nbr/nberwo/5224.html) 
+
+4.	[CNBC](https://www.cnbc.com/2019/01/16/house-democrats-introduce-bill-to-hike-minimum-wage-to-15-per-hour.html)
+
+
+
+\newpage
+
+## Appendix
+
+### Data Exploration
+
+```{r message=F, warning=F}
+#import required libraries
+library(stargazer)
+library(data.table)
+library(dplyr)
+library(tidyverse)
+library(TSA)
+library(lfe)
+```
+
+Data Source:
+Both datasets originate with Department of Labor's Bureau of Labor Statistics. The data set was built in 2016 by scrapping Local Area Unemployment Statistics from the website of the US Department of Labor Bureau of Labor Statistics. It contains unemployment data at the county and state level from 1990 to 2016. We can determine what years the federal minimum wage was raised by looking at the department of labor's website.
+
+Unemployment Data: https://www.kaggle.com/jayrav13/unemployment-by-county-us/home
+Minimum Wage Rate Data: https://www.dol.gov/whd/state/stateMinWageHis.htm
+
+
+The data that we extracted for unemployment rate contains data at the County level. However, we wanted to study the causal effect of Fed minimum wage rate hike on unemployment rate of state. Hence, we rolled up county unemployment rate to state unemployment rate by averaging. Here, we have made a strong assumption that all the county population within the state is same. A much more precise way to achieve average unemployment rate would have been to consider weighted average rate. However, for simplicity, we have considered Average rate.
+
+```{r message=F, warning=F}
+#load unemployment rate dataset
+data <- read.csv('output.csv')
+
+#rolling up data to state level from county level
+unemployment <- data %>% group_by(Year, State) %>% 
+  summarise(StateUnemployment = mean(Rate)) %>% ungroup
+setnames(unemployment, old=c("Year","State","StateUnemployment"), 
+         new=c("YEAR", "STATE", "RATE"))
+unemployment$STATE <- toupper(unemployment$STATE)
+
+#load dataset with minimum wage information
+wage <- read_csv("Minimum Wage Data.csv")
+setnames(wage, old=c("Year","State"), 
+         new=c("YEAR", "STATE"))
+wage <- wage[-c(3:4, 8:9)]
+wage$STATE <- toupper(wage$STATE)
+
+
+#Final dataset aftermerging the unemployment rate and minimum wages dataset
+final <- merge(x=unemployment, y=wage, by = c('STATE','YEAR'), all.x =T)
+final$Wage <- final$High.Value
+
+```
+
+
+We wanted to see how unemployment rate is distributed. hence we plotted histogram for the same.
+```{r message=F, warning=F}
+ggplot(final, aes(x=RATE)) + 
+ geom_histogram(aes(y=..density..), colour="black", fill="white")+
+ geom_density(alpha=.2, fill="#FF6666") 
+```
+We dont see unemployment varying a lot. If the scale of unemployment was skewed or had a large range we would have taken logarithmic value of rate. As the range is not big, we will use the rate value as it is for our analysis.
+
+There was a federal wage increase in two cycles in the recent times. one was in 1996-97 and another increase was during the 2007-2009 period. We want to analyse both these periods to find the effect of increase in minimum wages on unemployment rate.  
+```{r message=F, warning=F}
+#filtering datafrom 1993 to 2012
+final <- final %>% filter(YEAR > 1992 & YEAR < 2013)
+#adding the federal minimum wage rates into the dataset
+final <- final %>% 
+  mutate(Federal_wage = ifelse(YEAR >= 2009, 7.25,
+                               ifelse(YEAR == 2008,6.55,
+                                      ifelse(YEAR == 2007,5.85,
+                                             ifelse(YEAR >= 1997,5.15,
+                                                     ifelse(YEAR ==1996,4.75,4.25))))))
+
+```
+
+Before we go ahead with causal inference analysis, we want to check if there is good number of states in both treatment and control groups.
+```{r message=F, warning=F}
+#selecting first cycle of federal wage increase period (1996-1997) for analysis
+final_97 <- final %>% filter(YEAR > 1992 & YEAR < 2000)
+#Assigning treatment flag with the condition - statewage <= federal wage -> treatment group
+final_97$Treat <- ifelse(final_97$Wage<=final_97$Federal_wage & 
+                           final_97$YEAR == 1997 & 
+                           zlag(final_97$Wage) < final_97$Federal_wage,1,0)
+# assigning after flag to show when the treatment started
+final_97$After <- ifelse(final_97$YEAR >= 1997,1,0)
+```
+  
+```{r message=F, warning=F}
+final_97 <- final_97 %>% group_by(STATE) %>% summarise(a = sum(Treat)) %>%
+  ungroup() %>% mutate(Treated = ifelse(a >0,1,0)) %>%
+  merge(final_97, by = 'STATE')
+```
+  
+```{r message=F, warning=F}
+#to check the total states in treatment group
+sum(final_97$Treat)
+```
+Since treatment group bas 44 states, there is an imbalance in the treatment and control group data points. Hence we wont consider this period for analysis. Now lets look at the federal wage increase in 2007-2009.
+
+```{r message=F, warning=F}
+#filter years 2003 to 2012
+final <- final %>% filter(YEAR > 2003 & YEAR < 2013)
+final$Treat <- ifelse(final$Wage<=final$Federal_wage & final$YEAR == 2009 & 
+                        zlag(final$Wage) < final$Federal_wage,1,0)
+final$After <- ifelse(final$YEAR >= 2009,1,0)
+final_v1 <- final %>% group_by(STATE) %>% summarise(a = sum(Treat)) %>% 
+  ungroup() %>% mutate(Treated = ifelse(a >0,1,0)) %>% merge(final, by = 'STATE')
+```
+
+```{r message=F, warning=F}
+#check the division of states in control and treatment group
+sum(final$Treat)
+
+```
+This looks to be a good distribution of states in treatment and control group. We go ahead with our analysis to find the effect of an increase in federal minimum wage on unemployment rate.
+
+Visualising the trend of minimum wages in this period. The treatment period is from 2007 till 2009 as the federal minimum wages was increased in all three years successively.
+
+We wanted to visualize how the unemployment rate changed over the period for treatment and the control group. This would be helpful in knowing weather we can use difference in difference method or not. 
+
+```{r message=F, warning=F}
+MyData <- final_v1
+MyDataAggregated <- aggregate(MyData,by=list(MyData$Treated, MyData$YEAR),FUN=mean)
+# plot for enemployment rate between treatment and control group
+p <- ggplot(MyDataAggregated)
+p <- p + geom_line(data=MyDataAggregated[MyDataAggregated$Treated==0,], aes(YEAR, RATE),
+                   linetype='dashed')
+p <- p + geom_line(data=MyDataAggregated[MyDataAggregated$Treated==1,], aes(YEAR, RATE), 
+                   linetype='solid')
+#treatment period
+p <- p + geom_vline(xintercept=2009, linetype='dotted')
+p <- p + geom_vline(xintercept=2007, linetype='dotted')
+
+p <- p  + xlab("Year") + ylab("Avg. unemployment rate")
+p <- p + geom_rect(data=MyDataAggregated, aes(xmin=2007, xmax=2009, ymin=-Inf, ymax=+Inf), 
+                   fill='grey', alpha=0.05)
+p <- p + ylim(2.5, 12) + xlim(2004,2012) + scale_x_continuous(breaks = seq(2004,2012,1)) + 
+  theme_bw()
+p
+
+```
+
+In the above graph, 2007 to 2009 is the treatment period. 2004 to 2007 is the pre treatment period and 2009 to 2012 is the post treatment period. We see that both the control group and treatment group seem to be following a parallel trend. We need this assumption to be true to apply difference in difference model to infer the causal effect of increasing minimum federal wage on unemployment rate. We will prove this assumption later.
+
+Now lets apply difference in difference algorithm to find the treatment effect.
+```{r message=F, warning=F}
+did_basic <- lm(data=MyData,RATE~Treated+After+Treated*After)
+#summary(did_basic)
+did_sfe_tfe <- felm(data=MyData,RATE~Treated + After + After:Treated|factor(STATE)+YEAR)
+summary(did_sfe_tfe)
+
+stargazer(did_basic,did_sfe_tfe,title="DiD Estimates",
+          column.labels=c("Unemployment rate", "State + Time fixed effect"),type="text")
+
+```
+In the above regression the null hypothesis is that there is no treatment effect. We see that the treatment effect(the interaction term) is not significant as it has a p-value of 0.0696. We are considering a confidence interval of 95% hence we cant reject the null hypothesis.
+
+
+### Test for Parallel Trend Assumption
+
+The first step would be to relevel the ear variable so that we can condition the results on the year just before the treatment.
+```{r message=F, warning=F}
+#making year before treatmet start as reference year
+MyData$YEAR <- factor(MyData$YEAR)
+levels(MyData$YEAR)
+MyData <- within(MyData, YEAR <- relevel(YEAR,ref=3))
+levels(MyData$YEAR)
+
+```
+
+
+We now apply the dynamic difference in difference regression and all the outputs are conditioned on year 2006 which is the year before the startof the treatment.
+```{r message=F, warning=F}
+did_dyn_sfe_tfe <- felm(data=MyData,RATE~Treated*YEAR|factor(STATE)+YEAR)
+stargazer(did_dyn_sfe_tfe,type="text",title="Dynamic DiD + FEs",
+          column.labels = c("Dynamic DiD + FEs"))
+```
+
+We now plot the coefficients and the confidence interval to understand the trends in the pre-period to see if the parallel trend assumption is met.
+```{r message=F, warning=F}
+# plot the coefficients and confidence intervals
+# First, we pull out the coefficients and standard errors from the output object of the regression.
+coefs_ses <- cbind(did_dyn_sfe_tfe$coefficients,did_dyn_sfe_tfe$se)[]
+coefs_ses
+# We just want to keep the dynamic treatment estimates...
+coefs_ses <- coefs_ses[c(10:nrow(coefs_ses)),]
+coefs_ses
+```
+
+As we dont have estimates for the reference period, we impute year 2006error as zero.
+
+```{r message=F, warning=F}
+# We don't get estimates for the reference period so let's plug in 0's for it.
+coefs_ses <- data.frame(rbind(coefs_ses[c(1:2),],c(0,0),coefs_ses[c(3:nrow(coefs_ses)),]))
+row.names(coefs_ses)[3] <- "Treated:YEAR2006"
+row.names(coefs_ses)
+
+```
+
+```{r message=F, warning=F}
+# Making this a dataframe, and construct confidence interval. This is 90% confidence interval. 
+coefs_ses <- data.frame(coefs_ses)
+names(coefs_ses) <- c("betas","ses")
+coefs_ses$ub_90 <- coefs_ses$betas+1.645*coefs_ses$ses
+coefs_ses$lb_90 <- coefs_ses$betas-1.645*coefs_ses$ses
+#Creating a time period indicator for the graph that's easy to read. 
+coefs_ses$year <- seq(1:nrow(coefs_ses))
+```
+
+
+Now we can plot the errorand the confidence interval tocheck for parallel trend assumption.
+
+```{r message=F, warning=F}
+# connectng the estimates with a line and include a ribbon for the CIs. 
+plot <- ggplot(coefs_ses, aes(year,betas)) + 
+  geom_ribbon(aes(ymin=lb_90,ymax=ub_90,fill="90% CI"),alpha=0.3) 
+plot <- plot + geom_line() + geom_hline(yintercept=0,linetype="dashed",color="gray",size=1) +
+  geom_vline(xintercept=7,linetype="dashed",color="red",size=1) + theme_bw()
+plot
+```
+
+We can also plot a smooth curve to visualise thistrend as done below.
+
+```{r message=F, warning=F}
+# Fitting a smoothed line (lowess curve) to the coefficients, 
+#though this is less "rigorous" and more of a heuristic. 
+plot <- ggplot(coefs_ses, aes(year,betas))  
+plot <- plot + geom_smooth() + geom_hline(yintercept=0,linetype="dashed",color="gray",size=1) +
+  geom_vline(xintercept=3,linetype="dashed",color="red",size=1) + theme_bw()
+plot
+```
+From the above two graphs, in the pre treatment period we dont see any crazy deviations in the trend and hence we assume that the control and treatment groups have a parallel trend which is required to use difference in differences model.
+
+Next, lets test for Serial Correlation as there should be no serial correlation to apply this model.
+
+```{r message=F, warning=F}
+# collapsing the version of the Simple DiD to make sure serial correlation isn't a problem.
+MyData_sc <- aggregate(MyData,by=list(MyData$STATE,MyData$After),FUN=mean)
+did_collapse <- felm(data=MyData_sc,RATE~Treated:After|factor(Group.1)+After)
+stargazer(did_collapse,type="text",title="Collapse DiD + Subject FEs",
+          column.labels = c("Collapse DiD + FEs"))
+```
+
+We find the same treatment effect which we got from the difference in difference. Hence we can say that there is no serial correlation in our data.
+
+
+
+
