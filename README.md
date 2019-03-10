@@ -1,5 +1,7 @@
 # Effect of increase in federal minimum wage on unemployment rate in the United states
 
+Causal Inference course final project
+
 ## Motivation
 
 The Federal government has recently proposed a minimum wage policy change. The last time when Fed increased its minimum wage rate was 2009 and no changes have been observed in minimum wage rate since then. However, recently Democrats introduced bill to hike federal minimum wage gradually to $15 per hour, more than the double than that of the current minimum wage rate of $7.25 (Source 4).
