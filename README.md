@@ -8,7 +8,7 @@ Considering the scale at which hike has been proposed, we wanted to study what i
 raising the Federal minimum wage rate on unemployment. Does hike in the Federal minimum wage rate lead to
 more unemployment, as has been suggested by many? Hence, we decided to choose our focus of study on this topic. We believe a coherent and thoughtful study of this topic could help the Fed decide better whether to pursue hike in the Federal minimum wage or not.
 
-Experiment setting:
+## Experiment setting:
 
 __Unit of Analysis__: State    
 __Period of Observation__: 2004 - 2013  
